@@ -1,52 +1,51 @@
 * {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .calendar {
     margin: auto;
-    
-    
-   
-    
-}
 
-h1, h2, p {
-    font-size: 36px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header {
     color: lavender;
     text-align: center;
 }
-
+h1 {
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    text-align: center;
+}
+span {
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: lavender;
+    text-align: center;
+    
+   
+}
+/* calendar rows */
 .save {
     background-color: black;
     color: white;
-    padding: 20px;
-    margin-bottom: 10px;
-}
-
-.row {
-    width: 80%;
-    padding: 20px;
-   
-    background-color: lavender;
-    margin: auto;
-    margin-bottom: 10px;
+    padding: 10px;
 }
 .number {
     font-size: 30px; 
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    background-color: lavender;
+    border: solid black 1px;
+    text-align: center;
 }
-
-
-#nine {
-
+.day {
+    background-color: lavender;
+    padding: 10px;
 }
-
-#ten {
-
-}
-
-#eleven {
-
+.row {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
 }
