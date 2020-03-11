@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+.calendar {
+    margin: auto;
+    
+    
+   
+    
+}
+
+h1, h2, p {
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: lavender;
+    text-align: center;
+}
+
+.save {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.row {
+    width: 80%;
+    padding: 20px;
+   
+    background-color: lavender;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.number {
+    font-size: 30px; 
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#nine {
+
+}
+
+#ten {
+
+}
+
+#eleven {
+
+}
