@@ -24,6 +24,10 @@ span {
     
    
 }
+.textarea {
+   width: 550px;
+   height: 50px;
+}
 /* calendar rows */
 .save {
     background-color: black;

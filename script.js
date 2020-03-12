@@ -12,7 +12,9 @@ var nowDate = moment();
 var date = document.getElementById("date");
 date.innerHTML = nowDate.format("MMM Do YYYY"); 
 
-// var dayDate = day.innerHTML + ", " + date.innerHTML;
-// console.log(dayDate);
+// make onclick event for class "save"
+var input = document.getElementById("input9");
 
-// how to now place dayDate into 
+$(".save").on("click", function () {
+    localStorage.setItem("#input9", input.value);
+})
