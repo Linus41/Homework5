@@ -53,3 +53,17 @@ span {
     margin: auto;
     margin-bottom: 10px;
 }
+.past {
+    background-color: lightblue;
+    color: black;
+  }
+  
+  .present {
+    background-color: #ff6961;
+    color: black;
+  }
+  
+  .future {
+    background-color: #77dd77;
+    color: black;
+  }

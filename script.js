@@ -2,26 +2,83 @@
 
 
 
-
+// sets day of the week
 var nowMoment = moment();
 var day = document.getElementById("day");
 day.innerHTML = nowMoment.format("dddd");
 
-
+// sets date
 var nowDate = moment();
 var date = document.getElementById("date");
-date.innerHTML = nowDate.format("MMM Do YYYY"); 
+date.innerHTML = nowDate.format("MMM Do YYYY");
 
-// make onclick event for class "save"
-var input = document.getElementById("input9");
 
-// save to local storage
-  $(".save").on("click", function () {
-    localStorage.setItem("#input9", JSON.stringify(input.value));
+
+// make onclick event for class "save", save to local storage
+$(".save").on("click", function () {
+  // link var input with id "input9" text
+  var input = document.getElementById("input9").value;
+  localStorage.setItem("#input9", input);
+  var input2 = document.getElementById("input10").value;
+  localStorage.setItem("#input10", input2);
+  var input3 = document.getElementById("input11").value;
+  localStorage.setItem("#input11", input3);
+  var input4 = document.getElementById("input12").value;
+  localStorage.setItem("#input12", input4);
+  var input5 = document.getElementById("input1").value;
+  localStorage.setItem("#input1", input5);
+  var input6 = document.getElementById("input2").value;
+  localStorage.setItem("#input2", input6);
+  var input7 = document.getElementById("input3").value;
+  localStorage.setItem("#input3", input7);
+  var input8 = document.getElementById("input4").value;
+  localStorage.setItem("#input4", input8);
+  var input9 = document.getElementById("input5").value;
+  localStorage.setItem("#input5", input9);
 })
-// get item from local storage
+
 function grab() {
-    if(localStorage != null);
-    var final = localStorage.getItem("#input9");
-    input = final;
+  if (localStorage != null);
+  // get item from local storage, based on key
+ 
+  // setting local storage value to the DOM element(input9)
+  document.getElementById("input9").value = localStorage.getItem("#input9");
+  document.getElementById("input10").value = localStorage.getItem("#input10");
+  document.getElementById("input11").value = localStorage.getItem("#input11");
+  document.getElementById("input12").value = localStorage.getItem("#input12");
+  document.getElementById("input1").value = localStorage.getItem("#input1");
+  document.getElementById("input2").value = localStorage.getItem("#input2");
+  document.getElementById("input3").value = localStorage.getItem("#input3");
+  document.getElementById("input4").value = localStorage.getItem("#input4");
+  document.getElementById("input5").value = localStorage.getItem("#input5");
 }
+grab();
+
+
+function colorChange() {
+  // get current number of hours
+  var currentHour = moment().format("h");
+  console.log(currentHour);
+  // loop over time blocks
+  $(".time-block").each(function () {
+    //document.getElementsByClassName() returns a nodeList, not an element!
+    //as you probably have more .number elements, and only want the one inside the current .time-block (which would be this in the event handler)
+    var blockHour = parseInt(this.getElementsByClassName('number')[0].innerHTML);
+    console.log("BH: ", blockHour, currentHour, ); 
+
+    // check if we've moved past this time
+    if (blockHour < currentHour) {// && moment().format("hh:A").split(':')[1] == "AM" ){
+      $(this).addClass("past");
+    }
+    else if (blockHour == currentHour) {
+      $(this).removeClass("past");
+      $(this).addClass("present");
+    }
+    else {
+      $(this).removeClass("past");
+      $(this).removeClass("present");
+      $(this).addClass("future");
+    }
+  });
+}
+colorChange();
