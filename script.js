@@ -1,22 +1,12 @@
-
-
-
-
-// sets day of the week
 var nowMoment = moment();
 var day = document.getElementById("day");
 day.innerHTML = nowMoment.format("dddd");
 
-// sets date
 var nowDate = moment();
 var date = document.getElementById("date");
 date.innerHTML = nowDate.format("MMM Do YYYY");
 
-
-
-// make onclick event for class "save", save to local storage
 $(".save").on("click", function () {
-  // link var input with id "input9" text
   var input = document.getElementById("input9").value;
   localStorage.setItem("#input9", input);
   var input2 = document.getElementById("input10").value;
@@ -40,9 +30,6 @@ $(".save").on("click", function () {
 
 function grab() {
   if (localStorage != null);
-  // get item from local storage, based on key
-
-  // setting local storage value to the DOM element(input9)
   document.getElementById("input9").value = localStorage.getItem("#input9");
   document.getElementById("input10").value = localStorage.getItem("#input10");
   document.getElementById("input11").value = localStorage.getItem("#input11");
@@ -55,35 +42,15 @@ function grab() {
 }
 grab();
 
-// trying to reassign numbers 1 through 5 military time behind the scenes 
-// function militaryTime() {
-
-// }
-
-
 function colorChange() {
-  
-  // get current number of hours
   var currentHour = moment().format("H");
   console.log(currentHour);
-  // loop over time blocks
   $(".time-block").each(function () {
-    //document.getElementsByClassName() returns a nodeList, not an element!
-    //as you probably have more .number elements, and only want the one inside the current .time-block (which would be this in the event handler)
     var blockHour = parseInt(this.getElementsByClassName('number')[0].innerHTML);
-    if(blockHour === 1 || blockHour === 2 || blockHour === 3 || blockHour === 4 || blockHour === 5) {
+    if (blockHour === 1 || blockHour === 2 || blockHour === 3 || blockHour === 4 || blockHour === 5) {
       blockHour = blockHour + 12;
     }
-    console.log("BH: ", blockHour, currentHour);
-    // var one = document.getElementsByClassName("number").value;
-    // if (one === 1 || one === 2 || one === 3 || one === 4 || one === 5) {
-    //   one = one + 12;
-    // }
-    // check if we've moved past this time
-    // if blockHour is before current hour, addClass past
-    // if blockhour is equal to currentHour, addClass present
-    //  if blockhour is after currentHour, addClass future
-    if (blockHour < currentHour) {// && moment().format("hh:A").split(':')[1] == "AM" ){
+    if (blockHour < currentHour) {
       $(this).addClass("past");
     }
     else if (blockHour == currentHour) {

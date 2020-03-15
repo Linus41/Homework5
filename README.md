@@ -1,46 +1,9 @@
-# 05 Third-Party APIs: Work Day Scheduler
+Homework #5, Daily Planner
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+The goal of this project was to create a web application that acts as a daily calendar. When the user types their tasks into the forms on each day and saves them, the data is saved to local storage and remains upon refreshing the page. The current date and day of the week are displayed at the top of the page, and the time slots change color according to whether they are in the past, present, or future. 
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+I somehow missed the folder that included the HTML and CSS and ended up hard-coding and styling the whole thing from start to finish, which was in itself a good exercise. Something I couldn't figure out was how to make the save and grab functions DRY. They are all written out the long way. I'll revisit this after submitting to see if I can't do it!
 
-## User Story
+I had to have some help with the colorChange function, which I got from my tutor. I understand why it works and also had a very proud moment where I figured (out on my own!) that I needed to assign military time to the hours behind the scenes in order for the color change to work correctly. 
 
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
-
-## Acceptance Criteria
-
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
-
-The following animation demonstrates the application functionality:
-
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+All in all a fun project that taught me new things: how to use Moment.js, helped me get better at using local storage, and gave me good practice creating and working with functions. 

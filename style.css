@@ -7,7 +7,7 @@
 
 }
 header {
-    color: lavender;
+    color: black;
     text-align: center;
 }
 h1 {
@@ -66,4 +66,7 @@ span {
   .future {
     background-color: #77dd77;
     color: black;
+  }
+  #day, #date {
+      color: black;
   }
